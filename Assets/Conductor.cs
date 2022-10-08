@@ -10,6 +10,7 @@ public class Conductor : MonoBehaviour
     bool left = true;
     double window = 0.2; // second after beat allowed to follow
     // Start is called before the first frame update
+    [SerializeField] private AudioSource beat;
     void Start()
     {
         Play(100, (left) => Move(left));
@@ -53,7 +54,8 @@ public class Conductor : MonoBehaviour
     {
         while ((beats--) > 0)
         {
-            await Task.Delay(1000);
+            await Task.Delay(500);
+            beat.Play();
             lastBeat = Time.time;
             left = !left;
             callback(left);
