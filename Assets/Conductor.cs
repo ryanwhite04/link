@@ -45,7 +45,7 @@ public class Conductor : MonoBehaviour
 
     async void SetTimeout(Action callback, int ms)
     {
-        await Task.Delay(ms);
+        await Task.Delay(ms, destroyCancellationToken);
         callback();
     }
 
@@ -54,7 +54,7 @@ public class Conductor : MonoBehaviour
     {
         while ((beats--) > 0)
         {
-            await Task.Delay(500);
+            await Task.Delay(500, destroyCancellationToken);
             beat.Play();
             lastBeat = Time.time;
             left = !left;
