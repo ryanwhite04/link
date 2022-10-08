@@ -1030,6 +1030,11 @@ GameObject:
   - component: {fileID: 742009130}
   - component: {fileID: 742009135}
   - component: {fileID: 742009136}
+  - component: {fileID: 742009137}
+  - component: {fileID: 742009138}
+  - component: {fileID: 742009140}
+  - component: {fileID: 742009139}
+  - component: {fileID: 742009141}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -1071,7 +1076,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 742009129}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ae8cbaed4fdb7364dbbda9be6e5910f8, type: 3}
   m_Name: 
@@ -1290,6 +1295,134 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &742009137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742009129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9611d7154a588745843de72f0f32945, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxSpeed: 10
+  maxAcceleration: 52
+  maxDecceleration: 52
+  maxTurnSpeed: 80
+  maxAirAcceleration: 0
+  maxAirDeceleration: 0
+  maxAirTurnSpeed: 80
+  friction: 0
+  useAcceleration: 0
+  itsTheIntro: 0
+  directionX: 0
+  velocity: {x: 0, y: 0}
+  onGround: 0
+  pressingKey: 0
+--- !u!114 &742009138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742009129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b0bbddc8a848e34a9fa798b8cd91f66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groundLength: 0.95
+  colliderOffset: {x: 0, y: 0, z: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 8
+--- !u!114 &742009139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742009129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfdfe33be6f769349b972cde598d1fe2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  body: {fileID: 0}
+  velocity: {x: 0, y: 0}
+  jumpHeight: 5.5
+  jumpTime: 0.5
+  upwardMovementMultiplier: 1
+  downwardMovementMultiplier: 6.17
+  maxAirJumps: 0
+  variablejumpHeight: 0
+  jumpCutOff: 0
+  speedLimit: 0
+  coyoteTime: 0.15
+  jumpBuffer: 0.15
+  jumpSpeed: 0
+  gravMultiplier: 0
+  canJumpAgain: 0
+  onGround: 0
+--- !u!114 &742009140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742009129}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cadec1fbb09a274685dcf48edc2d34e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  checkpointFlag: {x: 0, y: 0, z: 0}
+  myAnim: {fileID: 0}
+  hurtSFX: {fileID: 0}
+  spriteRenderer: {fileID: 0}
+  respawnTime: 0
+  flashDuration: 0
+  onHurt:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &742009141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742009129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0cdf1e3358cee5459bd852efe68bf09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myAnimator: {fileID: 0}
+  characterSprite: {fileID: 0}
+  moveParticles: {fileID: 0}
+  jumpParticles: {fileID: 0}
+  landParticles: {fileID: 0}
+  jumpSFX: {fileID: 0}
+  landSFX: {fileID: 0}
+  squashAndStretch: 0
+  jumpSquashSettings: {x: 0, y: 0, z: 0}
+  landSquashSettings: {x: 0, y: 0, z: 0}
+  landSqueezeMultiplier: 0
+  jumpSqueezeMultiplier: 0
+  landDrop: 1
+  leanForward: 0
+  maxTilt: 0
+  tiltSpeed: 0
+  runningSpeed: 0
+  maxSpeed: 0
+  squeezing: 0
+  jumpSqueezing: 0
+  landSqueezing: 0
+  playerGrounded: 0
+  showJumpLine: 0
+  cameraFalling: 0
 --- !u!1 &1011908603
 GameObject:
   m_ObjectHideFlags: 0
